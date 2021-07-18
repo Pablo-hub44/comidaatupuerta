@@ -60,12 +60,14 @@ class BienvenidaPage extends StatelessWidget {
             ),
             SizedBox(height: 10.0),
             createButton(
+                context: context,
                 labelButton: 'Ingresar',
                 buttonColor: orange,
                 func: () {
                   Navigator.pushNamed(context, 'Login');
                 }),
             createButton(
+              context: context,
               labelButton: 'Conectar con facebook',
               buttonColor: fbButtonColor,
               //shape : shape,

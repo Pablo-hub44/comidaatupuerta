@@ -4,7 +4,7 @@ Widget headerText(
     {String texto = "",
     Color color = Colors.black,
     FontWeight fontWeight = FontWeight.bold,
-    double fontSize,
+    double? fontSize, //? = es opcional
     TextAlign textAlign = TextAlign.justify
     //le agregge este de arriba para que este justificado de manera predeterminada
     }) {

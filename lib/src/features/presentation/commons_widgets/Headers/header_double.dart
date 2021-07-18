@@ -2,7 +2,10 @@ import 'package:comidaatupuerta/src/colors/colors.dart';
 import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Headers/header_text.dart';
 import 'package:flutter/material.dart';
 
-Widget headerDoubleText({String textHeader, String textAction, Function func}) {
+Widget headerDoubleText(
+    {required String textHeader,
+    required String textAction,
+    Function()? func}) {
   return Container(
     child: Row(
       children: [

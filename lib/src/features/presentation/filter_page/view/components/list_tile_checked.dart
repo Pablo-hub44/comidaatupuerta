@@ -7,9 +7,13 @@ import 'package:comidaatupuerta/src/colors/colors.dart';
 class ListBuscarpor extends StatefulWidget {
   final String texto;
   final bool isActive;
-  final Function func;
+  final Function()? func;
 
-  ListBuscarpor({Key key, this.texto, this.isActive, this.func})
+  ListBuscarpor(
+      {Key? key,
+      required this.texto,
+      required this.isActive,
+      required this.func})
       : super(key: key);
 
   @override
@@ -33,7 +37,10 @@ class _ListBuscarporState extends State<ListBuscarpor> {
 }
 
 Widget listTiles(
-    {BuildContext context, texto: String, isActive: bool, Function func}) {
+    {required BuildContext context,
+    texto: String,
+    isActive: bool,
+    Function()? func}) {
   return Container(
     decoration: BoxDecoration(
       border: Border(

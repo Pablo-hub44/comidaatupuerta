@@ -4,7 +4,7 @@ import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Header
 import 'package:flutter/material.dart';
 
 class FavoritoTab extends StatefulWidget {
-  FavoritoTab({Key key}) : super(key: key);
+  FavoritoTab({Key? key}) : super(key: key);
 
   @override
   _FavoritoTabState createState() => _FavoritoTabState();
@@ -34,6 +34,7 @@ class _FavoritoTabState extends State<FavoritoTab> {
                 child: Column(
                   children: [
                     favoritosCard(
+                        context: context,
                         image: NetworkImage(
                             'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
                         title: "Andy & Cindy's Diner",
@@ -44,6 +45,7 @@ class _FavoritoTabState extends State<FavoritoTab> {
                         hasActionButton: true,
                         isFavorito: true),
                     favoritosCard(
+                        context: context,
                         image: NetworkImage(
                             'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
                         title: "Andy & Cindy's Diner",

@@ -1,22 +1,22 @@
 import 'package:comidaatupuerta/src/colors/colors.dart';
-import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Buttons/button_redondeado.dart';
+//import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Buttons/button_redondeado.dart';
 import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Headers/header_text.dart';
 import 'package:comidaatupuerta/src/utils/styles/box_decorations_shadows.dart';
 import 'package:flutter/material.dart';
 
 Widget favoritosCard(
-    {BuildContext context,
+    {required BuildContext context,
     double marginTop = 15.0,
     double marginRight = 0.0,
     double marginBottom = 0.0,
     double marginLeft = 0.0,
-    ImageProvider<Object> image,
-    String title,
-    String subtitle,
-    String review,
-    String rating,
+    required ImageProvider<Object> image, //? opcional
+    required String title,
+    required String subtitle,
+    required String review,
+    required String rating,
     String buttonText = '',
-    bool hasActionButton,
+    required bool hasActionButton,
     bool isFavorito = true}) {
   return Container(
     //margin: EdgeInsets.only(left: 10.0),
