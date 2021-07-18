@@ -1,5 +1,5 @@
 import 'package:comidaatupuerta/src/colors/colors.dart';
-import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Buttons/button_redondeado.dart';
+//import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Buttons/button_redondeado.dart';
 import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Headers/header_double.dart';
 import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Headers/header_text.dart';
 import 'package:comidaatupuerta/src/features/presentation/commons_widgets/backbuttons/back_button.dart';
@@ -261,7 +261,7 @@ Widget _infoPlaceStats() {
   );
 }
 
-Widget _offerBanner() {
+/*Widget _offerBanner(BuildContext context) {
   return Container(
     color: Color.fromRGBO(255, 237, 214, 1.0), //naranjita pastel
     padding: EdgeInsets.all(20.0),
@@ -285,6 +285,7 @@ Widget _offerBanner() {
         ),
         Spacer(),
         createButton(
+          context: context,
           labelButton: 'Ordena ahora',
           labelFontSize: 13.0,
           shape:
@@ -307,7 +308,7 @@ Widget _offerBanner() {
       ],
     ),
   );
-}
+}no lo estamos ocupando aun el widget*/
 
 Widget _headers({texto: String}) {
   return Container(

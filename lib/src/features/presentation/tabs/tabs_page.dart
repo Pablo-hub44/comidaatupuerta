@@ -9,7 +9,7 @@ import 'package:comidaatupuerta/src/features/presentation/tabs/explorar_tab.dart
 import 'package:comidaatupuerta/src/features/presentation/tabs/my_order_tab/miorden_tab.dart';
 
 class TabsPage extends StatefulWidget {
-  TabsPage({Key key}) : super(key: key);
+  TabsPage({Key? key}) : super(key: key);
 
   @override
   _TabsPageState createState() => _TabsPageState();
@@ -74,6 +74,7 @@ class _TabsPageState extends State<TabsPage> {
         "permite usar tu ubicación para mostrar el restaurante cercano en el mapa",
         //_hechobutton(context, "Habilita tu localización") sin el roundedButton
         createButton(
+            context: context,
             buttonColor: orange,
             labelButton: "Habilita tu localización",
             //shape : shape,

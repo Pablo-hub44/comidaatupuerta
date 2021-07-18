@@ -1,5 +1,5 @@
 import 'package:comidaatupuerta/src/colors/colors.dart';
-import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Buttons/button_redondeado.dart';
+//import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Buttons/button_redondeado.dart';
 import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Headers/header_text.dart';
 import 'package:comidaatupuerta/src/features/presentation/commons_widgets/backbuttons/back_button.dart';
 import 'package:comidaatupuerta/src/features/presentation/profile_detail_page/View/components/avatar_view.dart';
@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:comidaatupuerta/src/utils/Extensions/screen_size.dart';
 
 class PerfilDetailPage extends StatefulWidget {
-  PerfilDetailPage({Key key}) : super(key: key);
+  PerfilDetailPage({Key? key}) : super(key: key);
 
   @override
   _PerfilDetailPageState createState() => _PerfilDetailPageState();
@@ -59,14 +59,13 @@ class _PerfilDetailPageState extends State<PerfilDetailPage> {
               delegate: SliverChildListDelegate([
             Container(
               margin: EdgeInsets.only(
-                  top: screenHeight.getScreenHeight(
-                      context: context, multiplier: 0.1),
+                  top: getScreenHeight(context: context, multiplier: 0.1),
                   left: 15.0,
                   right: 15.0),
               //no va esto color: Colors.red,
               decoration: createBoxDecorationWithShadow(),
-              width: screenWidth.getScreenWidth(context: context),
-              height: screenHeight.getScreenHeight(
+              width: getScreenWidth(context: context),
+              height: getScreenHeight(
                   context: context,
                   multiplier:
                       0.66), //el context siempre se tiene que poner, 0.65 es el tamaño

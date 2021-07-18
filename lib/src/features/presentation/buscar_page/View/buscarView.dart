@@ -4,7 +4,7 @@ import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Header
 import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Headers/header_text.dart';
 import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Cards/populares_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+//import 'package:flutter_swiper/flutter_swiper.dart';
 
 class BuscarPage extends StatelessWidget {
   @override
@@ -47,6 +47,7 @@ class BuscarPage extends StatelessWidget {
                         textHeader: 'Recomendado para ti', textAction: ''),
                     SizedBox(height: 20.0),
                     popularesCard(
+                      context: context,
                       image: NetworkImage(
                           'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
                       title: "Andy & Cindy's Diner",
@@ -56,6 +57,7 @@ class BuscarPage extends StatelessWidget {
                       hasActionButton: false,
                     ),
                     popularesCard(
+                      context: context,
                       image: NetworkImage(
                           'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
                       title: "Andy & Cindy's Diner",
@@ -65,6 +67,7 @@ class BuscarPage extends StatelessWidget {
                       hasActionButton: false,
                     ),
                     popularesCard(
+                      context: context,
                       image: NetworkImage(
                           'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
                       title: "Andy & Cindy's Diner",
@@ -108,23 +111,17 @@ Widget _sliderRecentsearch() {
   return Container(
     margin: EdgeInsets.only(top: 5.0),
     height: 190.0,
-    child: Swiper(
-      itemCount: 4,
-      layout: SwiperLayout.DEFAULT,
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index) {
-        return ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (BuildContext context, int index) {
-            return cardVertical(
-                context: context,
-                width: 160.0,
-                height: 120.0,
-                title: "Andy & Cindys Diner",
-                subtitle: "87 Botsford circle Apt",
-                image: NetworkImage(
-                    'https://images.unsplash.com/photo-1493770348161-369560ae357d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=8'));
-          },
-        );
+        return cardVertical(
+            context: context,
+            width: 160.0,
+            height: 120.0,
+            title: "Andy & Cindys Diner",
+            subtitle: "87 Botsford circle Apt",
+            image: NetworkImage(
+                'https://images.unsplash.com/photo-1493770348161-369560ae357d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=8'));
       },
     ),
   );

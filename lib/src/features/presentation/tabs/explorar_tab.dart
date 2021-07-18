@@ -8,10 +8,10 @@ import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Header
 //servicios
 import 'package:flutter/services.dart';
 //swiper
-import 'package:flutter_swiper/flutter_swiper.dart';
+//import 'package:flutter_swiper/flutter_swiper.dart';
 
 class ExplorarTab extends StatelessWidget {
-  const ExplorarTab({Key key}) : super(key: key);
+  const ExplorarTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +51,7 @@ class ExplorarTab extends StatelessWidget {
                       _headers(
                           context, "Populares esta semana", "Mostrar todo"),
                       popularesCard(
+                        context: context,
                         image: NetworkImage(
                             'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
                         title: "Andy & Cindy's Diner",
@@ -61,6 +62,7 @@ class ExplorarTab extends StatelessWidget {
                         hasActionButton: true,
                       ),
                       popularesCard(
+                        context: context,
                         image: NetworkImage(
                             'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
                         title: "Andy & Cindy's Diner",
@@ -71,6 +73,7 @@ class ExplorarTab extends StatelessWidget {
                         hasActionButton: true,
                       ),
                       popularesCard(
+                        context: context,
                         image: NetworkImage(
                             'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
                         title: "Andy & Cindy's Diner",
@@ -162,16 +165,10 @@ Widget _topBar(BuildContext context) {
 Widget _sliderCards() {
   return Container(
     height: 350.0,
-    child: Swiper(
-      itemCount: 4,
-      layout: SwiperLayout.DEFAULT,
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index) {
-        return ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (BuildContext context, int index) {
-            return _tarjeta(context);
-          },
-        );
+        return _tarjeta(context);
       },
     ),
   );
@@ -234,6 +231,7 @@ Widget _tarjeta(BuildContext context) {
                     width: 80.0,
                     height: 18.0,
                     child: createButton(
+                        context: context,
                         buttonColor: orange,
                         labelButton: 'Delivery',
                         labelFontSize: 11.0),
@@ -377,17 +375,11 @@ Widget _headers(BuildContext context, String textoHeader, String textoAction) {
 Widget _sliderCollection() {
   return Container(
     height: 185.0,
-    child: Swiper(
-      itemCount: 4,
-      layout: SwiperLayout.DEFAULT,
-      itemBuilder: (BuildContext context, int index) {
-        return ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (BuildContext context, int index) {
-              return _tarjetaColeccion(context);
-            });
-      },
-    ),
+    child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (BuildContext context, int index) {
+          return _tarjetaColeccion(context);
+        }),
   );
 }
 

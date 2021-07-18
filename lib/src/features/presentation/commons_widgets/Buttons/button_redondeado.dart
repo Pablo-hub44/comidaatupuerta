@@ -26,24 +26,24 @@ const shape = StadiumBorder();
 
 //antes Widget button_redondeado({
 Widget createButton({
-  BuildContext context,
+  required BuildContext context, //required = requerido
   double width = 350.0,
   double height = 45.0,
   double radius = 20.0,
   bool isWithIcon = false,
-  ImageProvider<Object> icon,
-  String labelButton,
+  ImageProvider<Object>? icon, //? va a ser opcional
+  required String labelButton,
   Color labelButtoncolor = Colors.white,
   double labelFontSize = 15.0,
-  Color buttonColor,
+  required Color buttonColor,
   OutlinedBorder shape = shape,
-  Function func,
+  Function()? func,
 }) {
   return Container(
     width: width,
     height: height,
     margin: EdgeInsets.only(top: 25.0),
-    child: isWithIcon
+    child: isWithIcon //ya no && icon != null //&& = y
         ? _raisedButtonWithIcon(radius, icon, labelButton, labelButtoncolor,
             labelFontSize, buttonColor, shape, func)
         : _raisedButtonNotIcon(radius, labelButton, labelButtoncolor,
@@ -54,13 +54,13 @@ Widget createButton({
 //AssetImage('assets/facebook.png')  Text('Conectar con facebook',
 Widget _raisedButtonWithIcon(
     double radius,
-    ImageProvider<Object> icon,
+    ImageProvider<Object>? icon,
     String labelButton,
     Color labelButtoncolor,
     double labelFontSize,
     Color color,
     OutlinedBorder shape,
-    Function func) {
+    Function()? func) {
   return ElevatedButton(
       onPressed: func, //() {},
       /*antes shape:
@@ -72,7 +72,9 @@ Widget _raisedButtonWithIcon(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image(
-            image: icon,
+            image: icon ??
+                NetworkImage(
+                    ""), //?? = null check, podemos llamar una img local o online
             width: 20.0,
             height: 20.0,
           ),
@@ -99,7 +101,7 @@ Widget _raisedButtonNotIcon(
     double labelFontSize,
     Color color,
     OutlinedBorder shape,
-    Function func) {
+    Function()? func) {
   return ElevatedButton(
       onPressed: func,
       /*antes shape:

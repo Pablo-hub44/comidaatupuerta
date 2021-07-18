@@ -9,7 +9,7 @@ import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Header
 import 'package:comidaatupuerta/src/features/presentation/filter_page/view/components/cuisines_filters.dart';
 
 class FilterPage extends StatefulWidget {
-  FilterPage({Key key}) : super(key: key);
+  FilterPage({Key? key}) : super(key: key);
 
   @override
   _FilterPageState createState() => _FilterPageState();
@@ -164,7 +164,7 @@ class _FilterPageState extends State<FilterPage> {
   }
 }
 
-Widget _appBar(BuildContext context) {
+PreferredSizeWidget? _appBar(BuildContext context) {
   return AppBar(
     elevation: 0.8,
     backgroundColor: Colors.white,

@@ -39,6 +39,7 @@ class RegistroPage extends StatelessWidget {
               _passwordInput(context),
               //_buttonRegistro(context),
               createButton(
+                  context: context,
                   //shape : shape,
                   buttonColor: orange,
                   labelButton: 'Registrarse',

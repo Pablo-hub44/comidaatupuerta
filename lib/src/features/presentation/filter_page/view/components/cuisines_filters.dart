@@ -3,7 +3,7 @@ import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Button
 import 'package:flutter/material.dart';
 
 class CuisinesFilter extends StatefulWidget {
-  CuisinesFilter({Key key}) : super(key: key);
+  CuisinesFilter({Key? key}) : super(key: key);
 
   @override
   _CuisinesFilterState createState() => _CuisinesFilterState();
@@ -31,25 +31,25 @@ class _CuisinesFilterState extends State<CuisinesFilter> {
           children: [
             _roundedButtonFilter(() {
               setState(() => btnAmerican = !btnAmerican);
-            }, btnAmerican, 'American'),
+            }, btnAmerican, 'American', context),
             _roundedButtonFilter(() {
               setState(() => btnasia = !btnasia);
-            }, btnasia, 'Asia'),
+            }, btnasia, 'Asia', context),
             _roundedButtonFilter(() {
               setState(() => btnsushi = !btnsushi);
-            }, btnsushi, 'Sushi'),
+            }, btnsushi, 'Sushi', context),
             _roundedButtonFilter(() {
               setState(() => btnpizza = !btnpizza);
-            }, btnpizza, 'Pizza'),
+            }, btnpizza, 'Pizza', context),
             _roundedButtonFilter(() {
               setState(() => btnDessrts = !btnDessrts);
-            }, btnDessrts, 'Postres'),
+            }, btnDessrts, 'Postres', context),
             _roundedButtonFilter(() {
               setState(() => btnfastfood = !btnfastfood);
-            }, btnfastfood, 'Comida-rapi'),
+            }, btnfastfood, 'Comida-rapi', context),
             _roundedButtonFilter(() {
               setState(() => btnvietnamese = !btnvietnamese);
-            }, btnvietnamese, 'Vietna'),
+            }, btnvietnamese, 'Vietna', context),
           ],
         ),
         /*Row(
@@ -62,12 +62,14 @@ class _CuisinesFilterState extends State<CuisinesFilter> {
   }
 }
 
-Widget _roundedButtonFilter(Function func, bool isActive, String labelText) {
+Widget _roundedButtonFilter(
+    Function()? func, bool isActive, String labelText, BuildContext context) {
   return Container(
     width: 120.0,
     height: 50.0,
     margin: EdgeInsets.only(left: 5.0),
     child: createButton(
+      context: context,
       labelButton: labelText,
       labelButtoncolor: isActive ? orange : gris,
       func: func,

@@ -3,7 +3,7 @@ import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Header
 import 'package:flutter/material.dart';
 
 class PerfilTab extends StatefulWidget {
-  PerfilTab({Key key}) : super(key: key);
+  PerfilTab({Key? key}) : super(key: key);
 
   @override
   _PerfilTabState createState() => _PerfilTabState();

@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 class AvatarView extends StatelessWidget {
   //const AvatarView({Key key}) : super(key: key);
 
-  AvatarView({@required this.backgroundImage});
+  AvatarView(
+      {required this.backgroundImage}); //@required ya no se utiliza , ahora required
   final String backgroundImage;
 
   @override

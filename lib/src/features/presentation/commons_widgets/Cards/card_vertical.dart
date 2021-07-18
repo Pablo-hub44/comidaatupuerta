@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 
 Widget cardVertical(
     //redactorizado
-    {BuildContext context,
-    double width,
-    double height,
-    ImageProvider<Object> image,
-    String title,
-    String subtitle}) {
+    {required BuildContext context,
+    required double width,
+    required double height,
+    required ImageProvider<Object> image,
+    required String title,
+    required String subtitle}) {
   return Container(
     margin:
         EdgeInsets.only(top: 5.0, right: 5.0, bottom: 5.0), //antes .all(5.0)

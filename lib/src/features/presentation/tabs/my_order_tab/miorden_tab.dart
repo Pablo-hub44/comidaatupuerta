@@ -7,7 +7,7 @@ import 'package:comidaatupuerta/src/features/presentation/tabs/my_order_tab/comp
 import 'package:flutter/material.dart';
 
 class MiordenTab extends StatefulWidget {
-  MiordenTab({Key key}) : super(key: key);
+  MiordenTab({Key? key}) : super(key: key);
 
   @override
   _MiordenTabState createState() => _MiordenTabState();
@@ -84,7 +84,7 @@ Widget _cardOrder(BuildContext context) {
     child: Column(
       children: [
         Row(
-          children: [_cardOrderTopContent()],
+          children: [_cardOrderTopContent(context)],
         ),
         Column(
           children: [
@@ -100,7 +100,7 @@ Widget _cardOrder(BuildContext context) {
   );
 }
 
-Widget _cardOrderTopContent() {
+Widget _cardOrderTopContent(BuildContext context) {
   return Container(
     padding: EdgeInsets.symmetric(vertical: 10.0),
     child: Column(
@@ -128,6 +128,7 @@ Widget _cardOrderTopContent() {
                 width: 110.0,
                 height: 20.0,
                 child: createButton(
+                    context: context,
                     buttonColor: orange,
                     labelButton: 'Envio gratis',
                     labelFontSize: 11),

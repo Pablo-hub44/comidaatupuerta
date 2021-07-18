@@ -4,18 +4,18 @@ import 'package:comidaatupuerta/src/features/presentation/commons_widgets/Button
 import 'package:flutter/material.dart';
 
 Widget popularesCard(
-    {BuildContext context,
+    {required BuildContext context,
     double marginTop = 0.0,
     double marginRight = 0.0,
     double marginBottom = 0.0,
     double marginLeft = 10.0,
-    ImageProvider<Object> image,
-    String title,
-    String subtitle,
-    String review,
-    String rating,
+    required ImageProvider<Object> image,
+    required String title,
+    required String subtitle,
+    required String review,
+    required String rating,
     String buttonText = '',
-    bool hasActionButton}) {
+    required bool hasActionButton}) {
   return Column(
     children: [
       Container(
@@ -90,6 +90,7 @@ Widget popularesCard(
                         height: 18.0,
                         child: hasActionButton
                             ? createButton(
+                                context: context,
                                 buttonColor: orange,
                                 labelButton: buttonText,
                                 labelFontSize: 12.0,

@@ -1,4 +1,4 @@
-import 'package:comidaatupuerta/src/colors/colors.dart';
+//import 'package:comidaatupuerta/src/colors/colors.dart';
 import 'package:comidaatupuerta/src/utils/Extensions/screen_size.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +24,8 @@ class TextFieldPerfilDetailView extends StatelessWidget {
 //metodos           _ = significa privado
 Widget _createTextFieldusername(BuildContext context) {
   return Container(
-    width: screenHeight.getScreenWidth(context: context, multiplier: 0.85),
+    //antes screenHeight.getScreenWidth
+    width: getScreenWidth(context: context, multiplier: 0.85),
     decoration: BoxDecoration(
         border:
             Border(bottom: BorderSide(color: Theme.of(context).dividerColor))),
@@ -41,7 +42,8 @@ Widget _createTextFieldusername(BuildContext context) {
 
 Widget _createTextFieldemail(BuildContext context) {
   return Container(
-    width: screenHeight.getScreenWidth(context: context, multiplier: 0.85),
+    //antes screenHeight.getScreenWidth
+    width: getScreenWidth(context: context, multiplier: 0.85),
     decoration: BoxDecoration(
         border:
             Border(bottom: BorderSide(color: Theme.of(context).dividerColor))),
@@ -58,7 +60,8 @@ Widget _createTextFieldemail(BuildContext context) {
 
 Widget _createTextFieldphone(BuildContext context) {
   return Container(
-    width: screenHeight.getScreenWidth(context: context, multiplier: 0.85),
+    //antes screenHeight.getScreenWidth
+    width: getScreenWidth(context: context, multiplier: 0.85),
     decoration: BoxDecoration(
         border:
             Border(bottom: BorderSide(color: Theme.of(context).dividerColor))),
@@ -75,7 +78,8 @@ Widget _createTextFieldphone(BuildContext context) {
 
 Widget _createTextFieldbirthday(BuildContext context) {
   return Container(
-    width: screenHeight.getScreenWidth(context: context, multiplier: 0.85),
+    //antes screenHeight.getScreenWidth
+    width: getScreenWidth(context: context, multiplier: 0.85),
     decoration: BoxDecoration(
         border:
             Border(bottom: BorderSide(color: Theme.of(context).dividerColor))),
@@ -92,7 +96,8 @@ Widget _createTextFieldbirthday(BuildContext context) {
 
 Widget _createTextFieldDeliveryAddress(BuildContext context) {
   return Container(
-    width: screenHeight.getScreenWidth(context: context, multiplier: 0.85),
+    //antes screenHeight.getScreenWidth
+    width: getScreenWidth(context: context, multiplier: 0.85),
     decoration: BoxDecoration(
         border:
             Border(bottom: BorderSide(color: Theme.of(context).dividerColor))),
